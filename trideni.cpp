@@ -29,7 +29,7 @@ void serad(seznam_slov & jmena)
 {
 	string tmp;
 	int i,j;
-	for (i=i; i<jmena.size();++i)
+	for (i=1; i<jmena.size();++i)
 	{
 		tmp=jmena[i];
 		j=i-1;
