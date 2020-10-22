@@ -28,7 +28,20 @@ void nacti (string nazev, seznam_slov & jmena)
 void serad(seznam_slov & jmena)
 {
 	string tmp;
-	bool bylo_prohozeno;
+	int i,j;
+	for (i=i; i<jmena.size();++i)
+	{
+		tmp=jmena[i];
+		j=i-1;
+		
+		while(j>=0 && jmena[j].compare(tmp)>0)
+		{
+			jmena[j+1]=jmena[j];
+			j=j-1;
+		}
+		jmena[j+1]=tmp;
+	}
+/*	bool bylo_prohozeno;
 	do
 	{
 		bylo_prohozeno = false;
@@ -42,7 +55,7 @@ void serad(seznam_slov & jmena)
 				bylo_prohozeno = true;
 			}
 		}
-	} while (bylo_prohozeno);
+	} while (bylo_prohozeno);*/
 }
 
 bool zeptej_se_jestli_vypsat()
