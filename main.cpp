@@ -4,10 +4,13 @@
 #include <ctime>
 #include <exception>
 #include <vector>
+#include <stdexcept>
 
 // Vytvorte tento hlavickovy soubor a definujte v nem datovy typ seznam_slov a
 // hlavicky funkci viz nize (UKOL 1-4)
+
 #include "trideni.h"
+
 
 // Dale vytvorte soubor trideni.cpp ktery bude obsahovat telo techto funkci
 
@@ -23,6 +26,8 @@ std::string nazev_z_prikazove_radky(int argc, char* argv[]) {
     return std::string(argv[1]);
 }
 
+
+
 // Hlavni funkce programu
 
 int main(int argc, char* argv[]) {
@@ -33,7 +38,8 @@ int main(int argc, char* argv[]) {
 
     // UKOL 1 - Implementujte nasledujici funkci, ktera nacte do objektu "jmena"
     //          vsechna slova ve vstupnim souboru (1 radek = 1 polozka)
-    nacti(nazev_vstupniho_souboru, jmena);
+  
+   	nacti(nazev_vstupniho_souboru, jmena);
 
     std::cout << "Nacteno " << jmena.size() << " slov." << std::endl;
     std::cout << "Serazuji slova ... " << std::endl;
@@ -49,7 +55,7 @@ int main(int argc, char* argv[]) {
     clock_t end = clock();
     float seconds = (float)(end - start) / CLOCKS_PER_SEC;
 
-    std::cout << "Hotovo. Serazeni trvalo " << seconds << " sekundy." <<  std::endl << std::endl;
+   	std::cout << "Hotovo. Serazeni trvalo " << seconds << " sekundy." <<  std::endl << std::endl;
 
     // UKOL 3 - funkce v podmince se zepta uzivatele,
     //          jestli chce vypsat jmena na obrazovku
